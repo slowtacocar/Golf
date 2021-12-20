@@ -15,6 +15,7 @@ export default function handler(req, res) {
     if (err) {
       throw err;
     } else {
+      console.log(req.body);
       const auth = pusher.authenticate(
         req.body.socket_id,
         req.body.channel_name,
