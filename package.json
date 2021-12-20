@@ -1,0 +1,10 @@
+{
+  "name": "golf",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "pusher": "^5.0.0"
+  },
+  "packageManager": "yarn@3.1.1"
+}
