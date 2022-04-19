@@ -15,12 +15,13 @@ export default function handler(req, res) {
     if (err) {
       throw err;
     } else {
-      console.log(req.body);
+      const { id, ...info } = req.body.info;
       const auth = pusher.authenticate(
         req.body.socket_id,
         req.body.channel_name,
         {
           user_id: crypto.randomUUID(),
+          user_info: info,
         }
       );
       res.status(200).json(auth);
